@@ -3,6 +3,7 @@
 ## Topics
 
 - [Insert using mongoose](#insert-using-mongoose)
+- [Read/Find using mongoose](#readfind-using-mongoose)
 
 ## Insert using mongoose
 
@@ -115,3 +116,24 @@ model.insertMany(
   }
 );
 ```
+
+---
+
+## Read/Find using mongoose
+
+- To retrive/read data from database we have `model.find()` method
+- `model.find({condition}, callback function)` - retrive data using condition
+- `model.find(callback function)` - retrive data without any condition
+
+```
+Eg.
+model.find((err, data) => {
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Data", data);
+  }
+});
+```
+
+---
