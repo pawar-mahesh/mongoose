@@ -4,6 +4,7 @@
 
 - [Insert using mongoose](#insert-using-mongoose)
 - [Read/Find using mongoose](#readfind-using-mongoose)
+- [Update using mongoose](#update-using-mongoose)
 
 ## Insert using mongoose
 
@@ -134,6 +135,41 @@ model.find((err, data) => {
     console.log("Data", data);
   }
 });
+```
+
+---
+
+## Update using mongoose
+
+- To update data using mongoose we have `model.updateOne() and model.updateMany()` methods
+
+```
+Eg.
+updateOne()
+model.updateOne(
+  { _id: "64291a0691f51e952eac12d9" },
+  { $set: { name: "Updated" } },
+  (err, data) => {
+    if (err) {
+      console.log("Error", err);
+    } else {
+      console.log("Data", data);
+    }
+  }
+);
+
+updateMany()
+model.updateMany(
+  { name: "1111" },
+  { $set: { name: "Updated" } },
+  (err, data) => {
+    if (err) {
+      console.log("Error data", err);
+    } else {
+      console.log("Data", data);
+    }
+  }
+);
 ```
 
 ---
