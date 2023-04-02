@@ -1,5 +1,9 @@
 # mongoose
 
+## Topics
+
+- [Insert using mongoose](#insert-using-mongoose)
+
 ## Insert using mongoose
 
 Steps
@@ -78,7 +82,7 @@ newUser.save((err, data) => {
 - Insert many document using documents
 
 ```
-model.insertMany([objects]) - used to insert many documents
+model.insertMany([objects], callback function) - used to insert many documents
 
 Eg.
 model.insertMany(
