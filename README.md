@@ -5,6 +5,7 @@
 - [Insert using mongoose](#insert-using-mongoose)
 - [Read/Find using mongoose](#readfind-using-mongoose)
 - [Update using mongoose](#update-using-mongoose)
+- [Delete using mongoose](#delete-using-mongoose)
 
 ## Insert using mongoose
 
@@ -170,6 +171,33 @@ model.updateMany(
     }
   }
 );
+```
+
+---
+
+## Delete using mongoose
+
+- To delete data using mongoose we have `model.deleteOne() and model.deleteMany()` methods
+
+```
+Eg.
+deleteOne()
+model.deleteOne({ name: "0000" }, (err, data) => {
+  if (err) {
+    console.log("Error data", err);
+  } else {
+    console.log("Data", data);
+  }
+});
+
+deleteMany()
+model.deleteMany({ name: "121212" }, (err, data) => {
+  if (err) {
+    console.log("Error data", err);
+  } else {
+    console.log("Data", data);
+  }
+});
 ```
 
 ---
