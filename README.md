@@ -138,6 +138,22 @@ model.find((err, data) => {
 });
 ```
 
+If we don't want perticular field in data we can pass its value as 0 so that it will not retire
+that perticular field
+
+```
+Eg.
+model.find({}, {name: 0}, (err, data) => {
+  if (err) {
+    console.log("Error", err);
+  } else {
+    console.log("Data", data);
+  }
+});
+
+here, name filed will not retrive as we set its value to 0
+```
+
 ---
 
 ## Update using mongoose
